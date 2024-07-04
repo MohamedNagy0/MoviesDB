@@ -9,11 +9,13 @@ export default function Home() {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            <Container className="pt-[60px] lg:pt-[70px]">
-                <Row>
-                    <Col>Home</Col>
-                </Row>
-            </Container>
+            <section>
+                <Container className="pt-[60px] lg:pt-[70px]">
+                    <Row>
+                        <Col>Home</Col>
+                    </Row>
+                </Container>
+            </section>
         </>
     );
 }

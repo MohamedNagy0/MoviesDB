@@ -7,11 +7,13 @@ export default function TV() {
             <Helmet>
                 <title>TV</title>
             </Helmet>
-            <Container className="pt-[60px] lg:pt-[70px]">
-                <Row>
-                    <Col>TV</Col>
-                </Row>
-            </Container>
+            <section>
+                <Container className="pt-[60px] lg:pt-[70px]">
+                    <Row>
+                        <Col>TV</Col>
+                    </Row>
+                </Container>
+            </section>
         </>
     );
 }
