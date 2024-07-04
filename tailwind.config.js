@@ -31,11 +31,11 @@ export default {
             colors: {
                 "primary-color": "var(--primary-color)",
                 "primary-color2": "var(--primary-color2)",
+                "primary-color3": "var(--primary-color3)",
                 "primary-bg": "var(--primary-bg)",
                 "primary-bg-card1": "var(--primary-bg-card1)",
                 "primary-bg-card2": "var(--primary-bg-card2)",
                 "primary-bg-card3": "var(--primary-bg-card3)",
-                "primary-bg-card4": "var(--primary-bg-card4)",
                 "primary-border": "var(--border-color)",
                 "primary-hover": "var(--primary-hover)",
                 "primary-active": "var(--primary-active)",

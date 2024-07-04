@@ -31,25 +31,25 @@ nav {
 .light {
     --primary-color: #000000;
     --primary-color2: #f2e7fe;
+    --primary-color3: #7c7c7c;
     --primary-bg: #ffffff;
-    --primary-bg-card1: #6200ee;
-    --primary-bg-card2: #3700b3;
-    --primary-bg-card3: #018786;
-    --primary-bg-card4: #b00020;
+    --primary-bg-card1: #3700b3;
+    --primary-bg-card2: #018786;
+    --primary-bg-card3: #b00020;
     --border-color: rgba(23, 2, 34, 0.089);
     --primary-hover: #eee;
-    --primary-active: #f2e7fe;
+    --primary-active: #018786;
 }
 
 .dark {
     --primary-color: #f2e7fe;
     --primary-color2: #f2e7fe;
+    --primary-color3: #b3b3b3;
     --primary-bg: #121212;
-    --primary-bg-card1: #1f1f1f;
-    --primary-bg-card2: #121212;
-    --primary-bg-card3: #03dac6;
-    --primary-bg-card4: #cf6679;
+    --primary-bg-card1: #121212;
+    --primary-bg-card2: #03dac6;
+    --primary-bg-card3: #cf6679;
     --border-color: #f2e7fe1f;
     --primary-hover: #eeeeee15;
-    --primary-active: #018786;
+    --primary-active: #b00020;
 }

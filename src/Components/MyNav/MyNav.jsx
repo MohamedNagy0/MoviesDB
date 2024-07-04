@@ -25,12 +25,12 @@ export default function MyNav() {
                         className="text-2xl font-bold flex items-center gap-1"
                         to="/"
                     >
-                        <span>MoviesDB</span>
                         <span>
-                            <RiMovie2Fill
-                                size="2rem"
-                                className="text-primary-active"
-                            />
+                            Movies
+                            <span className="text-primary-active">DB</span>
+                        </span>
+                        <span>
+                            <RiMovie2Fill size="2rem" />
                         </span>
                     </Link>
 
