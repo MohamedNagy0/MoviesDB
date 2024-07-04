@@ -10,6 +10,7 @@ import { CiCloudMoon } from "react-icons/ci";
 
 export default function MyNav() {
     const [openThem, setOpenThem] = useState(false);
+
     localStorage.getItem("them")
         ? document.body.classList.add(localStorage.getItem("them"))
         : document.body.classList.add("light");
