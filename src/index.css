@@ -33,12 +33,12 @@ nav {
     --primary-color2: #f2e7fe;
     --primary-color3: #7c7c7c;
     --primary-bg: #ffffff;
-    --primary-bg-card1: #3700b3;
+    --primary-bg-card1: #14193b;
     --primary-bg-card2: #018786;
     --primary-bg-card3: #b00020;
     --border-color: rgba(23, 2, 34, 0.089);
     --primary-hover: #eee;
-    --primary-active: #018786;
+    --primary-active: #e4611e;
 }
 
 .dark {
