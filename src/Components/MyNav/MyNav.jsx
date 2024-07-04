@@ -18,7 +18,7 @@ export default function MyNav() {
         <>
             <Navbar
                 expand="lg"
-                className="bg-primary-bg border-b border-primary-border lg:py-4 fixed top-0  z-50 w-full"
+                className="bg-primary-bg-card1 text-primary-color2 border-b border-primary-border lg:py-4 fixed top-0  z-50 w-full"
             >
                 <Container>
                     <Link
@@ -29,7 +29,7 @@ export default function MyNav() {
                         <span>
                             <RiMovie2Fill
                                 size="2rem"
-                                className="text-primary-bg-card3"
+                                className="text-primary-color2"
                             />
                         </span>
                     </Link>
@@ -43,7 +43,7 @@ export default function MyNav() {
                             size="1.6rem"
                         />
                         {openThem ? (
-                            <ul className="absolute bottom-[-80px] right-1/2 py-2 translate-x-1/2 w-[100px] rounded-xl border border-primary-border bg-primary-bg flex flex-col justify-center items-center gap-2">
+                            <ul className="absolute text-primary-color bottom-[-80px] right-1/2 py-2 translate-x-1/2 w-[100px] rounded-xl border border-primary-border bg-primary-bg flex flex-col justify-center items-center gap-2">
                                 <li
                                     className="hover:bg-primary-hover cursor-pointer w-full flex items-center justify-center gap-2"
                                     onClick={() => {
@@ -86,14 +86,27 @@ export default function MyNav() {
                         aria-controls="basic-navbar-nav"
                         className="focus:shadow-none border-none flex items-center justify-center text-primary-color"
                     >
-                        <i className="fa-solid fa-bars text-2xl"></i>
+                        <i className="fa-solid fa-bars text-2xl text-primary-color2"></i>
                     </Navbar.Toggle>
 
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className=" flex items-center gap-3 lg:ms-auto">
-                            <NavLink to="/">Home</NavLink>
+                        <Nav className=" flex items-center gap-3 lg:ms-auto text-primary-color2">
                             <NavLink
-                                className="lg:after:h-1/2 lg:after:translate-y-1/2 lg:after:ml-5 lg:after:bg-slate-400 lg:after:w-[1px] lg:after:absolute lg:after:left-full relative"
+                                className={({ isActive }) =>
+                                    ` active relative ${
+                                        isActive ? "before:w-full" : ""
+                                    }`
+                                }
+                                to="/"
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    `active relative lg:after:h-1/2 lg:after:translate-y-1/2 lg:after:ml-5 lg:after:bg-slate-400 lg:after:w-[1px] lg:after:absolute lg:after:left-full ${
+                                        isActive ? "before:w-full" : ""
+                                    }`
+                                }
                                 to="tv"
                             >
                                 TV

@@ -30,10 +30,12 @@ export default {
         extend: {
             colors: {
                 "primary-color": "var(--primary-color)",
+                "primary-color2": "var(--primary-color2)",
                 "primary-bg": "var(--primary-bg)",
-                "primary-bg-card": "var(--primary-bg-card)",
+                "primary-bg-card1": "var(--primary-bg-card1)",
                 "primary-bg-card2": "var(--primary-bg-card2)",
                 "primary-bg-card3": "var(--primary-bg-card3)",
+                "primary-bg-card4": "var(--primary-bg-card4)",
                 "primary-border": "var(--border-color)",
                 "primary-hover": "var(--primary-hover)",
             },

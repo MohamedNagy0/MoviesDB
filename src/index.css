@@ -5,35 +5,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .active {
+        @apply before:w-0  before:duration-300 hover:before:w-full before:h-[2px] before:bg-primary-color2  before:absolute before:-bottom-[5px] before:left-0;
+    }
+}
+
 body {
     transition: all 300ms;
     background-color: var(--primary-bg);
     color: var(--primary-color);
     font-family: "Poppins", sans-serif;
 }
-.active {
-    font-weight: 900;
-    color: var(--primary-bg-card3);
-}
 
 .light {
-    --primary-color: #170222;
-    --primary-bg: #faf1fe;
-    --primary-bg-card: #9c1cf2;
-    --primary-bg-card2: #f87c7c;
-    --primary-bg-card3: #f4873e;
+    --primary-color: #000000;
+    --primary-color2: #f2e7fe;
+    --primary-bg: #ffffff;
+    --primary-bg-card1: #6200ee;
+    --primary-bg-card2: #3700b3;
+    --primary-bg-card3: #018786;
+    --primary-bg-card4: #b00020;
     --border-color: rgba(23, 2, 34, 0.089);
     --primary-hover: #eee;
 }
 
 .dark {
-    --primary-color: #f2ddfd;
-    --primary-bg: #0a010e;
-    --primary-bg-card: #8d0de3;
-    --primary-bg-card2: #830707;
-    --primary-bg-card3: #c1540b;
-    --border-color: rgba(242, 221, 253, 0.103);
-    --primary-hover: #3d3d3d42;
+    --primary-color: #f2e7fe;
+    --primary-color2: #f2e7fe;
+    --primary-bg: #121212;
+    --primary-bg-card1: #1f1f1f;
+    --primary-bg-card2: #121212;
+    --primary-bg-card3: #03dac6;
+    --primary-bg-card4: #cf6679;
+    --border-color: #f2e7fe1f;
+    --primary-hover: #eeeeee15;
 }
 
 .navbar-toggler-icon {
