@@ -38,6 +38,7 @@ export default {
                 "primary-bg-card4": "var(--primary-bg-card4)",
                 "primary-border": "var(--border-color)",
                 "primary-hover": "var(--primary-hover)",
+                "primary-active": "var(--primary-active)",
             },
         },
     },

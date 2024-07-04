@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, NavLink } from "react-router-dom";
 import { RiMovie2Fill } from "react-icons/ri";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { LuMoonStar } from "react-icons/lu";
 import { CiCloudMoon } from "react-icons/ci";
@@ -29,7 +29,7 @@ export default function MyNav() {
                         <span>
                             <RiMovie2Fill
                                 size="2rem"
-                                className="text-primary-color2"
+                                className="text-primary-active"
                             />
                         </span>
                     </Link>

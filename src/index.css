@@ -7,7 +7,7 @@
 
 @layer components {
     .active {
-        @apply before:w-0  before:duration-300 hover:before:w-full before:h-[2px] before:bg-primary-color2  before:absolute before:-bottom-[5px] before:left-0;
+        @apply before:w-0  before:duration-300 hover:before:w-full before:h-[2px] before:bg-primary-active before:absolute before:-bottom-[5px] before:left-0;
     }
 }
 
@@ -28,6 +28,7 @@ body {
     --primary-bg-card4: #b00020;
     --border-color: rgba(23, 2, 34, 0.089);
     --primary-hover: #eee;
+    --primary-active: #f2e7fe;
 }
 
 .dark {
@@ -40,6 +41,7 @@ body {
     --primary-bg-card4: #cf6679;
     --border-color: #f2e7fe1f;
     --primary-hover: #eeeeee15;
+    --primary-active: #018786;
 }
 
 .navbar-toggler-icon {
