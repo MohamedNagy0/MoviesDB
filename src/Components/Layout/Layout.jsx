@@ -12,7 +12,6 @@ export default function Layout() {
             <Online>
                 <Outlet />
             </Online>
-
             <Offline>
                 <div className="container relative pt-[80px] pb-[320px] max-md:pb-[380px]">
                     <MyOffline />
