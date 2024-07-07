@@ -7,9 +7,15 @@ import { useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { LuMoonStar } from "react-icons/lu";
 import { CiCloudMoon } from "react-icons/ci";
+import Button from "react-bootstrap/Button";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function MyNav() {
     const [openThem, setOpenThem] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     localStorage.getItem("them")
         ? document.body.classList.add(localStorage.getItem("them"))
@@ -19,7 +25,7 @@ export default function MyNav() {
         <>
             <Navbar
                 expand="lg"
-                className="bg-primary-bg-card1 text-primary-color2 border-b border-primary-border lg:py-4 fixed top-0  z-50 w-full"
+                className="bg-primary-bg-card1 text-primary-color2 border-b border-primary-border pl-3 lg:py-4 fixed top-0 z-50 w-full"
             >
                 <Container>
                     <Link
@@ -35,7 +41,7 @@ export default function MyNav() {
                         </span>
                     </Link>
 
-                    <div className="relative max-lg:ms-auto lg:order-last lg:ml-10">
+                    <div className="relative max-lg:ms-auto lg:order-last">
                         <CiCloudMoon
                             className="cursor-pointer"
                             onClick={() => {
@@ -84,36 +90,50 @@ export default function MyNav() {
                     </div>
 
                     <Navbar.Toggle
+                        onClick={handleShow}
                         aria-controls="basic-navbar-nav"
                         className="focus:shadow-none border-none flex items-center justify-center text-primary-color"
                     >
                         <i className="fa-solid fa-bars text-2xl text-primary-color2"></i>
                     </Navbar.Toggle>
 
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className=" flex items-center gap-3 lg:ms-auto text-primary-color2">
-                            <NavLink
-                                className={({ isActive }) =>
-                                    ` active relative ${
-                                        isActive ? "before:w-full" : ""
-                                    }`
-                                }
-                                to="/"
-                            >
-                                Home
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    `active relative lg:after:h-1/2 lg:after:translate-y-1/2 lg:after:ml-5 lg:after:bg-slate-400 lg:after:w-[1px] lg:after:absolute lg:after:left-full ${
-                                        isActive ? "before:w-full" : ""
-                                    }`
-                                }
-                                to="tv"
-                            >
-                                TV
-                            </NavLink>
-                        </Nav>
-                    </Navbar.Collapse>
+                    <Offcanvas
+                        show={show}
+                        onHide={handleClose}
+                        responsive="lg"
+                        className="bg-primary-bg-card1 text-primary-color2 lg:me-auto lg:ml-10"
+                    >
+                        <div className="text-right px-3 py-2 lg:hidden">
+                            <i
+                                onClick={handleClose}
+                                className="fa-solid fa-xmark text-xl cursor-pointer p-2"
+                            ></i>
+                        </div>
+                        <Offcanvas.Body>
+                            <Nav className=" flex items-center gap-8 lg:ms-auto text-primary-color2">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        ` active relative lg:after:h-1/2 lg:after:translate-y-1/2 lg:after:mr-5 lg:after:bg-slate-400 lg:after:w-[1px] lg:after:absolute lg:after:right-full ${
+                                            isActive ? "before:w-full" : ""
+                                        }`
+                                    }
+                                    to="/"
+                                >
+                                    Home
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        `active relative ${
+                                            isActive ? "before:w-full" : ""
+                                        }`
+                                    }
+                                    to="tv"
+                                >
+                                    TV
+                                </NavLink>
+                            </Nav>
+                        </Offcanvas.Body>
+                    </Offcanvas>
                 </Container>
             </Navbar>
         </>

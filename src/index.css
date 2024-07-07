@@ -12,8 +12,10 @@
 }
 
 /* basic style */
+* {
+    transition: color 300ms, background-color 300ms;
+}
 body {
-    transition: all 300ms;
     background-color: var(--primary-bg);
     color: var(--primary-color);
     font-family: "Poppins", sans-serif;
@@ -23,12 +25,12 @@ body {
 nav {
     font-family: "Oswald", sans-serif;
 }
+
 .navbar-toggler-icon {
     visibility: hidden;
 }
 
 /* themes */
-
 .light {
     --primary-color: #000000;
     --primary-color2: #f2e7fe;
