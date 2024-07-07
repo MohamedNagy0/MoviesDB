@@ -7,7 +7,6 @@ import { useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { LuMoonStar } from "react-icons/lu";
 import { CiCloudMoon } from "react-icons/ci";
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function MyNav() {
@@ -41,7 +40,7 @@ export default function MyNav() {
                         </span>
                     </Link>
 
-                    <div className="relative max-lg:ms-auto lg:order-last">
+                    <div className="relative active:scale-75 max-lg:ms-auto lg:order-last">
                         <CiCloudMoon
                             className="cursor-pointer"
                             onClick={() => {
@@ -92,7 +91,7 @@ export default function MyNav() {
                     <Navbar.Toggle
                         onClick={handleShow}
                         aria-controls="basic-navbar-nav"
-                        className="focus:shadow-none border-none flex items-center justify-center text-primary-color"
+                        className="focus:shadow-none border-none active:scale-75 flex items-center justify-center text-primary-color"
                     >
                         <i className="fa-solid fa-bars text-2xl text-primary-color2"></i>
                     </Navbar.Toggle>
@@ -103,11 +102,13 @@ export default function MyNav() {
                         responsive="lg"
                         className="bg-primary-bg-card1 text-primary-color2 lg:me-auto lg:ml-10"
                     >
-                        <div className="text-right px-3 py-2 lg:hidden">
-                            <i
+                        <div className="flex justify-end px-3 py-2 lg:hidden mt-1">
+                            <span
                                 onClick={handleClose}
-                                className="fa-solid fa-xmark text-xl cursor-pointer p-2"
-                            ></i>
+                                className="size-1 cursor-pointer p-[12px] rounded-full active:scale-75 border-[2px] border-primary-bg-card1 hover:border-primary-active flex justify-center items-center"
+                            >
+                                <i className="fa-solid fa-xmark text-md "></i>
+                            </span>
                         </div>
                         <Offcanvas.Body>
                             <Nav className=" flex items-center gap-8 lg:ms-auto text-primary-color2">
