@@ -1,5 +1,8 @@
 .homeHeader {
-    background-image: linear-gradient(#01878700, var(--primary-bg)),
+    background-image: linear-gradient(
+            var(--primary-layer),
+            var(--primary-layer)
+        ),
         url("../../assets/bg.jpg");
     background-size: cover;
     background-position: center;

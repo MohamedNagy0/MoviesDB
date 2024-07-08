@@ -39,6 +39,7 @@ export default {
                 "primary-border": "var(--border-color)",
                 "primary-hover": "var(--primary-hover)",
                 "primary-active": "var(--primary-active)",
+                "primary-layer": "var(--primary-layer)",
             },
         },
     },

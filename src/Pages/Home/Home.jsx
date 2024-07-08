@@ -13,7 +13,7 @@ export default function Home() {
     const getTrendingMovies = () => {
         const options = {
             method: "GET",
-            url: "https://api.themoviedb.org/3/trending/movie/day",
+            url: "https://api.themoviedb.org/3/trending/all/day",
             params: { language: "en-US" },
             headers: {
                 accept: "application/json",
@@ -45,9 +45,29 @@ export default function Home() {
             {trendingMovies ? (
                 <section>
                     <header className={`${styles.homeHeader} h-[500px]`}>
-                        <Container className="pt-[60px] lg:pt-[70px]">
-                            <Row>
-                                <Col></Col>
+                        <Container className="pt-[60px]  lg:pt-[70px] h-full">
+                            <Row className="h-full">
+                                <Col className=" flex flex-col gap-8 justify-center">
+                                    <p
+                                        style={{ lineHeight: "1.1" }}
+                                        className="text-[32px] font-medium text-white flex flex-col"
+                                    >
+                                        <span className="font-bold text-[48px]">
+                                            Welcome.
+                                        </span>
+                                        <span className="ml-1">
+                                            Millions of movies, TV shows and
+                                            people to discover. Explore now
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <input
+                                            type="search"
+                                            placeholder="Search for a movie, tv show, person...."
+                                            className="w-full py-[10px] rounded-3xl pl-6 placeholder:text-sm focus:outline-none"
+                                        />
+                                    </div>
+                                </Col>
                             </Row>
                         </Container>
                     </header>

@@ -40,14 +40,27 @@ export default function MyNav() {
                         </span>
                     </Link>
 
-                    <div className="relative active:scale-75 max-lg:ms-auto lg:order-last">
-                        <CiCloudMoon
-                            className="cursor-pointer"
-                            onClick={() => {
-                                setOpenThem(!openThem);
-                            }}
-                            size="1.6rem"
-                        />
+                    <div className="relative max-lg:ms-auto lg:order-last">
+                        {localStorage.getItem("them") == "dark" ? (
+                            <span
+                                onClick={() => {
+                                    setOpenThem(!openThem);
+                                }}
+                                className="inline-block cursor-pointer hover:bg-slate-800 duration-300  p-[7px] rounded-lg"
+                            >
+                                <LuMoonStar size="1.3rem" />
+                            </span>
+                        ) : (
+                            <span
+                                onClick={() => {
+                                    setOpenThem(!openThem);
+                                }}
+                                className="inline-block cursor-pointer hover:bg-slate-700 duration-300   p-[7px] rounded-lg"
+                            >
+                                <IoSunnyOutline size="1.3rem" />
+                            </span>
+                        )}
+
                         {openThem ? (
                             <ul className="absolute text-primary-color bottom-[-80px] right-1/2 py-2 translate-x-1/2 w-[100px] rounded-xl border border-primary-border bg-primary-bg flex flex-col justify-center items-center gap-2">
                                 <li

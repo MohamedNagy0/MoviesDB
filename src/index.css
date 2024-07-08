@@ -12,13 +12,12 @@
 }
 
 /* basic style */
-* {
-    transition: all 300ms !important;
-}
+
 body {
     background-color: var(--primary-bg);
     color: var(--primary-color);
     font-family: "Poppins", sans-serif;
+    transition: all 300ms;
 }
 
 /* nav style */
@@ -42,6 +41,7 @@ nav {
     --border-color: rgba(23, 2, 34, 0.089);
     --primary-hover: #eee;
     --primary-active: #018786;
+    --primary-layer: #01878762;
 }
 
 .dark {
@@ -55,4 +55,5 @@ nav {
     --border-color: #f2e7fe1f;
     --primary-hover: #eeeeee15;
     --primary-active: #b00020;
+    --primary-layer: #b0002062;
 }
