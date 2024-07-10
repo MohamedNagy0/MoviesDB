@@ -40,7 +40,7 @@ export default function MyNav() {
                         </span>
                     </Link>
 
-                    <div className="relative max-lg:ms-auto lg:order-last">
+                    <div className="relative flex items-center max-lg:ms-auto lg:order-last">
                         {localStorage.getItem("them") == "dark" ? (
                             <span
                                 onClick={() => {
