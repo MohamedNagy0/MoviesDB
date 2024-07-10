@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Pages/Home/Home";
 import TV from "./Pages/TV/TV";
-
+import { Provider } from "react-redux";
+import { myStory } from "./app/store";
 function App() {
     const routes = createBrowserRouter([
         {
@@ -22,7 +23,9 @@ function App() {
     ]);
     return (
         <>
-            <RouterProvider router={routes}></RouterProvider>
+            <Provider store={myStory}>
+                <RouterProvider router={routes}></RouterProvider>
+            </Provider>
         </>
     );
 }
