@@ -9,6 +9,12 @@
     .active {
         @apply before:w-0  before:duration-300 hover:before:w-full before:h-[2px] before:bg-primary-active before:absolute before:-bottom-[5px] before:left-0;
     }
+    .handelPaddingTop {
+        @apply pt-[60px] lg:pt-[70px];
+    }
+    .flexCenter {
+        @apply flex justify-center items-center;
+    }
 }
 
 /* basic style */
