@@ -6,8 +6,8 @@ import { RiMovie2Fill } from "react-icons/ri";
 import { useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { LuMoonStar } from "react-icons/lu";
-import { CiCloudMoon } from "react-icons/ci";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { RiMenu3Line } from "react-icons/ri";
 
 export default function MyNav() {
     const [openThem, setOpenThem] = useState(false);
@@ -106,7 +106,7 @@ export default function MyNav() {
                         aria-controls="basic-navbar-nav"
                         className="focus:shadow-none border-none active:scale-75 flex items-center justify-center text-primary-color"
                     >
-                        <i className="fa-solid fa-bars text-2xl text-primary-color2"></i>
+                        <RiMenu3Line className="text-primary-color2 text-2xl" />
                     </Navbar.Toggle>
 
                     <Offcanvas
