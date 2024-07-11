@@ -8,7 +8,6 @@ export default function Layout() {
     return (
         <>
             <MyNav />
-            <Footer />
             <Online>
                 <Outlet />
             </Online>
@@ -17,6 +16,7 @@ export default function Layout() {
                     <MyOffline />
                 </div>
             </Offline>
+            <Footer />
         </>
     );
 }

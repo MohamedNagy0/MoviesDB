@@ -16,15 +16,15 @@ export default {
         container: {
             center: true,
             screens: {
-                sm: "640px",
+                sm: "540px",
 
-                md: "720",
+                md: "720px",
 
                 lg: "960px",
 
                 xl: "1140px",
 
-                "2xl": "1280",
+                "2xl": "1320px",
             },
         },
         extend: {

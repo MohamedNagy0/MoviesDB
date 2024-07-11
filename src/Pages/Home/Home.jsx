@@ -32,31 +32,33 @@ export default function Home() {
             </Helmet>
             <section>
                 <header className={`${styles.homeHeader} h-[500px]`}>
-                    <Container className="pt-[60px]  lg:pt-[70px] h-full">
-                        <Row className="h-full">
-                            <Col className=" flex flex-col gap-8 justify-center">
-                                <p
-                                    style={{ lineHeight: "1.1" }}
-                                    className="text-[32px] font-medium text-white flex flex-col"
-                                >
-                                    <span className="font-bold text-[48px]">
-                                        Welcome.
-                                    </span>
-                                    <span className="ml-1">
-                                        Millions of movies, TV shows and people
-                                        to discover. Explore now
-                                    </span>
-                                </p>
-                                <div>
-                                    <input
-                                        type="search"
-                                        placeholder="Search for a movie, tv show, person...."
-                                        className="w-full py-[10px] rounded-3xl pl-6 placeholder:text-sm focus:outline-none"
-                                    />
+                    <div className="container pt-[60px] flex justify-center items-center  lg:pt-[70px] h-full">
+                        <div className="grid grid-cols-12">
+                            <div className="col-span-12 place-content-center">
+                                <div className="flex flex-col gap-8 justify-center">
+                                    <p
+                                        style={{ lineHeight: "1.1" }}
+                                        className="text-[32px] font-medium text-white flex flex-col"
+                                    >
+                                        <span className="font-bold text-[48px]">
+                                            Welcome.
+                                        </span>
+                                        <span className="ml-1">
+                                            Millions of movies, TV shows and
+                                            people to discover. Explore now
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <input
+                                            type="search"
+                                            placeholder="Search for a movie, tv show, person...."
+                                            className="w-full py-[10px] rounded-3xl pl-6 placeholder:text-sm focus:outline-none"
+                                        />
+                                    </div>
                                 </div>
-                            </Col>
-                        </Row>
-                    </Container>
+                            </div>
+                        </div>
+                    </div>
                 </header>
                 {isError ? (
                     <p className="text-white bg-red-600 text-xl text-center p-8">
