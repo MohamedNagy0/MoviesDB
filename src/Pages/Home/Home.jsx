@@ -3,26 +3,27 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Helmet } from "react-helmet";
 import styles from "./Home.module.css";
-import { useEffect } from "react";
-import Loading from "../../Components/Loading/Loading";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllMoviesTrending } from "../../app/trending.slice";
+import { useEffect } from "react";
+import { getAllTrending } from "../../app/trending.slice";
+import Loading from "../../Components/Loading/Loading";
 
 export default function Home() {
     const dispatch = useDispatch();
 
-    const { allMoviesTrendingData, allMoviesTrendingPending, isError } =
+    const { allTrendingData, allTrendingIsPending, isError, error } =
         useSelector((store) => {
-            return store.trendingReducer;
+            return store.trendingSlice;
         });
 
     useEffect(() => {
-        dispatch(getAllMoviesTrending());
+        dispatch(getAllTrending());
     }, []);
 
-    if (allMoviesTrendingPending) {
+    if (allTrendingIsPending) {
         return <Loading />;
     }
+    console.log(allTrendingData);
 
     return (
         <>
@@ -59,7 +60,7 @@ export default function Home() {
                 </header>
                 {isError ? (
                     <p className="text-white bg-red-600 text-xl text-center p-8">
-                        {isError ? isError : ""}
+                        {isError ? error : ""}
                     </p>
                 ) : (
                     ""

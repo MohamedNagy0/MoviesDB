@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import trendingReducer from "./trending.slice";
+import trendingSlice from "./trending.slice";
 
-export const myStory = configureStore({
+export const myStore = configureStore({
     reducer: {
-        trendingReducer,
+        trendingSlice,
     },
 });

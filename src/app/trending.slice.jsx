@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getAllMoviesTrending = createAsyncThunk(
-    "trendingSlice/getAllMoviesTrending",
+export const getAllTrending = createAsyncThunk(
+    "trendingSlice/getAllTrending",
     async () => {
         const options = {
             method: "GET",
@@ -22,40 +22,38 @@ export const getAllMoviesTrending = createAsyncThunk(
 
 const trendingSlice = createSlice({
     name: "trendingSlice",
-
     initialState: {
-        allMoviesTrendingData: null,
-        allMoviesTrendingPending: false,
+        allTrendingData: null,
+        allTrendingIsPending: false,
         isError: false,
+        error: false,
     },
-
     extraReducers: (builder) => {
-        //getAllMoviesTrending success case
-        builder.addCase(
-            getAllMoviesTrending.fulfilled,
-            (prevState, { payload }) => {
-                prevState.allMoviesTrendingData = payload;
-                prevState.allMoviesTrendingPending = false;
-                prevState.isError = false;
-            }
-        );
-        //getAllMoviesTrending loading case
-        builder.addCase(getAllMoviesTrending.pending, (prevState) => {
-            prevState.allMoviesTrendingPending = true;
-            prevState.allMoviesTrendingData = null;
+        //getAllTrending success case
+        builder.addCase(getAllTrending.fulfilled, (prevState, { payload }) => {
+            prevState.allTrendingData = payload;
+            prevState.allTrendingIsPending = false;
             prevState.isError = false;
+            prevState.error = false;
         });
-        //getAllMoviesTrending error case
-        builder.addCase(
-            getAllMoviesTrending.rejected,
-            (prevState, { payload }) => {
-                prevState.allMoviesTrendingPending = false;
-                prevState.allMoviesTrendingData = null;
-                if (payload == undefined) {
-                    prevState.isError = "Oops! Try Later Please";
-                }
-            }
-        );
+
+        //getAllTrending loading case
+        builder.addCase(getAllTrending.pending, (prevState) => {
+            prevState.allTrendingData = null;
+            prevState.allTrendingIsPending = true;
+            prevState.isError = false;
+            prevState.error = false;
+        });
+
+        //getAllTrending error case
+        builder.addCase(getAllTrending.rejected, (prevState, { payload }) => {
+            prevState.allTrendingData = null;
+            prevState.allTrendingIsPending = false;
+            prevState.isError = true;
+            payload == undefined
+                ? (prevState.error = "Please try other time.")
+                : "";
+        });
     },
 });
 export default trendingSlice.reducer;

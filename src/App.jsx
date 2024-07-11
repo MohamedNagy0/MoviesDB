@@ -3,7 +3,7 @@ import Layout from "./Components/Layout/Layout";
 import Home from "./Pages/Home/Home";
 import TV from "./Pages/TV/TV";
 import { Provider } from "react-redux";
-import { myStory } from "./app/store";
+import { myStore } from "./app/store";
 function App() {
     const routes = createBrowserRouter([
         {
@@ -23,7 +23,7 @@ function App() {
     ]);
     return (
         <>
-            <Provider store={myStory}>
+            <Provider store={myStore}>
                 <RouterProvider router={routes}></RouterProvider>
             </Provider>
         </>
