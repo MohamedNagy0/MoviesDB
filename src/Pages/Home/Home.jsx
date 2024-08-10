@@ -20,7 +20,6 @@ export default function Home() {
     if (allTrendingIsPending) {
         return <Loading />;
     }
-    console.log(allTrendingData);
 
     return (
         <>
